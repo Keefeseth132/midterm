@@ -1,0 +1,75 @@
+.header-container {
+	height: 150px;
+	background-color: #666;
+}
+
+.logo {
+	padding: 20px 10px 5px 20px;
+}
+
+.page-name {
+	font-size: 28px;
+	padding-left: 110px;
+	position: absolute;
+}
+
+.navbar-float {
+	width: 500px;
+	height: 40px;
+	float: right;
+	margin-top: 100px;
+}
+
+.navbar-button {
+	display: inline;
+	border-left: 1px solid #f9f9f9;
+	padding: 5px;
+}
+
+.navbar-button:hover {
+	background-color: lightgreen;
+}
+
+.right-bar {
+	border-right: 1px solid #f9f9f9;
+}
+
+#custom-search-input{
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+    width: 700px;
+    margin-top: 15px;
+}
+
+#custom-search-input input{
+    border: 0;
+    box-shadow: none;
+}
+
+#search-bar-title {
+	margin: 0 auto;
+	margin-right: 600px;
+	margin-top: 25px;
+	text-align: center;
+}
+
+#custom-search-input button{
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input .glyphicon-search{
+    font-size: 23px;
+}
