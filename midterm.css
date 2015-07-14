@@ -11,6 +11,7 @@
 	font-size: 28px;
 	padding-left: 110px;
 	position: absolute;
+	color: white;
 }
 
 .navbar-float {
@@ -30,6 +31,10 @@
 	background-color: lightgreen;
 }
 
+a {
+	color: white;
+}
+
 .right-bar {
 	border-right: 1px solid #f9f9f9;
 }
@@ -39,19 +44,18 @@
     border-radius: 6px;
     background-color: #fff;
     width: 700px;
-    margin-top: 15px;
+    margin-top: 20px;
+    margin-bottom: 25px;
 }
 
 #custom-search-input input{
     border: 0;
     box-shadow: none;
+    margin: 0 auto;
 }
 
 #search-bar-title {
-	margin: 0 auto;
-	margin-right: 600px;
-	margin-top: 25px;
-	text-align: center;
+	margin-top: 30px;
 }
 
 #custom-search-input button{
@@ -72,4 +76,55 @@
 
 #custom-search-input .glyphicon-search{
     font-size: 23px;
+}
+
+.picture-title h4 {
+	margin: 0px;
+	text-align: center;
+	border-bottom: 1px solid #666;
+	color: #666;
+}
+
+.front {
+	overflow: hidden;
+	width: 200px;
+	height: 200px;
+	border-radius: 10px;
+	display: inline-block;
+	position: absolute;
+	backface-visibility: hidden;
+	-webkit-transition: 1s;
+
+}
+.back {
+	padding: 20px;
+	width: 200px;
+	height: 200px;
+	bottom: 200px;
+	z-index: -1;
+	-webkit-transform: rotateY(-180deg);
+	backface-visibility: hidden;
+	-webkit-transition: 1s;
+}
+
+.front, .back {
+	background-color: #ccc;
+	border-radius: 10px;
+}
+
+.portfolio-item {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	float: left;
+	margin: 10px;
+	-webkit-perspective: 200px;
+}
+.portfolio-item:hover .front {
+	-webkit-transform: rotateY(180deg);
+	-webkit-transform-style: preserve-3d;
+}
+.portfolio-item:hover .back {
+	-webkit-transform: rotateY(0deg);
+	-webkit-transform-style: preserve-3d;
 }
