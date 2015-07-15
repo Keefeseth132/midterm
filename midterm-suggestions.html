@@ -11,29 +11,29 @@
 <body>
 
 	<header class="header-container">
-	<img class="logo" src="placeholder.png">
-	<div class="page-name">Name of site</div>
+	<img class="logo" src="images/placeholder.png">
+	<div class="page-name">Encyclopedia Budtanica</div>
 		<div class="navbar-float">
 			<nav>
 				<ul>
-					<li class="navbar-button"><a href="midterm.html">Home</a></li>
-					<li class="navbar-button"><a href="midterm-about.html">About</a></li>
-					<li class="navbar-button"><a href="midterm-suggestions.html">Suggestions</a></li>
-					<li class="navbar-button right-bar"><a href="midterm-new.html">I'm new to this</a></li>
+					<a href="midterm.html"><li class="navbar-button">Home</li></a>
+					<a href="midterm-about.html"><li class="navbar-button">About</li></a>
+					<a href="midterm-suggestions.html"><li class="navbar-button active-nav">Suggestions</li></a>
+					<a href="midterm-new.html"><li class="navbar-button">I'm new to cannabis</li></a>
 				</ul>
 			</nav>
 		</div>
 	</header>
-<div class="container">
+<div class="container text-color">
 	<div class="row">
         <div class="col-md-12">
-    		<h3 id="suggestion-bar-title">Personality here?</h3>
+    		<h3 id="suggestion-bar-title" class="text-color">We're still growing!</h3>
             <div id="custom-suggestion-input">
                 <div class="input-group">
-                    <input type="text" class="form-control input-lg" placeholder="Ex. headache" />
+                    <input type="text" id="input-box" class="form-control input-lg" placeholder="how can we improve this site?" />
                     <span class="input-group-btn">
                         <button class="btn btn-info btn-lg" type="button">
-                            <span class="glyphicon glyphicon-send"></span>
+                            <span id="send-button" class="glyphicon glyphicon-send"></span>
                         </button>
                     </span>
                 </div>
@@ -46,6 +46,6 @@
 	
 
 
-<script type="text/javascript" src="midterm.js"></script>
+<script type="text/javascript" src="midterm-suggestions.js"></script>
 </body>
 </html>

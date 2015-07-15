@@ -12,14 +12,14 @@
 
 	<header class="header-container">
 	<img class="logo" src="images/placeholder.png">
-	<div class="page-name">Name of site</div>
+	<div class="page-name">Encyclopedia Budtanica</div>
 		<div class="navbar-float">
 			<nav>
 				<ul>
-					<li class="navbar-button"><a href="midterm.html">Home</a></li>
-					<li class="navbar-button"><a href="midterm-about.html">About</a></li>
-					<li class="navbar-button"><a href="midterm-suggestions.html">Suggestions</a></li>
-					<li class="navbar-button right-bar"><a href="midterm-new.html">I'm new to this</a></li>
+					<a href="midterm.html"><li class="navbar-button active-nav">Home</li></a>
+					<a href="midterm-about.html"><li class="navbar-button">About</li></a>
+					<a href="midterm-suggestions.html"><li class="navbar-button">Suggestions</li></a>
+					<a href="midterm-new.html"><li class="navbar-button">I'm new to cannabis</li></a>
 				</ul>
 			</nav>
 		</div>
@@ -28,12 +28,12 @@
 <div class="container">
 	<div class="row">
         <div class="col-md-12">
-    		<h3 id="search-bar-title">Personality here?</h3>
+    		<h3 id="search-bar-title">What ails you?</h3>
             <div id="custom-search-input">
                 <div class="input-group">
-                    <input type="text" class="form-control input-lg" placeholder="Ex. headache" />
+                    <input type="text"  id="input-box" class="form-control input-lg" placeholder="stress, pain, depression, insomnia, lack of appetite, seizures, muscle spasms, nausea" />
                     <span class="input-group-btn">
-                        <button class="btn btn-info btn-lg" type="button">
+                        <button id="search-button" class="btn btn-info btn-lg" type="button">
                             <span class="glyphicon glyphicon-search"></span>
                         </button>
                     </span>
@@ -42,8 +42,9 @@
         </div>
 	</div>
 		
-	<div class="row picture-title">
-		<div class="col-xs-12 col-sm-6 col-md-3">
+	<div id="card-content-area" class="row picture-title">
+		<!-- {{cardTemplate}} -->
+		<!-- <div class="col-xs-12 col-sm-6 col-md-3">
 			<div class="portfolio-item">
 				<div class="front">
 					<h4>Cotton Candy Kush</h4>
@@ -60,9 +61,9 @@
 					</ul>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
-		<div class="col-xs-12 col-sm-6 col-md-3">
+		<!-- <div class="col-xs-12 col-sm-6 col-md-3">
 			<div class="portfolio-item">
 				<div class="front">
 					<h4>Grape Ape</h4>
@@ -78,9 +79,9 @@
 					</ul>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
-		<div class="col-xs-12 col-sm-6 col-md-3">	
+		<!-- <div class="col-xs-12 col-sm-6 col-md-3">	
 			<div class="portfolio-item">
 				<div class="front">
 					<h4>Alien OG</h4>
@@ -96,9 +97,9 @@
 					</ul>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
-		<div class="col-xs-12 col-sm-6 col-md-3">
+		<!-- <div class="col-xs-12 col-sm-6 col-md-3">
 			<div class="portfolio-item">
 				<div class="front">
 					<h4>Canna Tsu</h4>
@@ -114,12 +115,12 @@
 					</ul>
 				</div>
 			</div>
-		</div> <!--end of col-->
+		</div> --> <!--end of col-->
 
-	</div> <!--end of row-->
+	<!-- </div> end of row -->
 
-	<div class="row picture-title">
-		<div class="col-xs-12 col-sm-6 col-md-3">
+	<!-- <div class="row picture-title"> -->
+		<!-- <div class="col-xs-12 col-sm-6 col-md-3">
 			<div class="portfolio-item">
 				<div class="front">
 					<h4>Blue Dream</h4>
@@ -135,9 +136,9 @@
 					</ul>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
-		<div class="col-xs-12 col-sm-6 col-md-3">
+		<!-- <div class="col-xs-12 col-sm-6 col-md-3">
 			<div class="portfolio-item">
 				<div class="front">
 					<h4>Girl Scout Cookies</h4>
@@ -153,9 +154,9 @@
 					</ul>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
-		<div class="col-xs-12 col-sm-6 col-md-3">	
+		<!-- <div class="col-xs-12 col-sm-6 col-md-3">	
 			<div class="portfolio-item">
 				<div class="front">
 					<h4>Sour Diesel</h4>
@@ -171,9 +172,9 @@
 					</ul>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
-		<div class="col-xs-12 col-sm-6 col-md-3">
+		<!-- <div class="col-xs-12 col-sm-6 col-md-3">
 			<div class="portfolio-item">
 				<div class="front">
 					<h4>LA Confidential</h4>
@@ -188,15 +189,39 @@
 						<li>Premium Teir</li>
 					</ul>
 				</div>
-			</div>
-		</div> <!--end of col-->
+			</div> -->
+		<!-- </div> --> <!--end of col-->
 
-	</div>
+	</div> <!--end of row-->
 
 </div> <!--this is the end of container -->
 
+<script id="flip-card" type="text/x-handlebars-template">
+	{{#each strains}}
+	
+		<div class="col-xs-12 col-sm-6 col-md-3">
+			<div class="portfolio-item">
+				<div class="front">
+					<h4>{{name}}</h4>
+					<img src={{image}}>
+				</div>
+				<div class="back">
+					<ul>
+						<li>Type: {{type}}</li>
+						<li>THC: {{THC}}</li>
+						<li>CBD: {{CBD}}</li>
+						<li>CBN: {{CBN}}</li>
+						<li>Effects: {{effects}}</li>
+						<li>Ailments: {{ailments}}</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 
+	{{/each}}
+</script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script> <!-- must add after template -->
 <script type="text/javascript" src="midterm.js"></script>
 </body>
 </html>

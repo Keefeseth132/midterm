@@ -1,6 +1,10 @@
+body {
+	background-color: ;
+}
+
 .header-container {
 	height: 150px;
-	background-color: #666;
+	background-color: #9cb535;
 }
 
 .logo {
@@ -23,20 +27,21 @@
 
 .navbar-button {
 	display: inline;
-	border-left: 1px solid #f9f9f9;
-	padding: 5px;
+	padding: 150px 22px 32px 20px;
+
 }
 
-.navbar-button:hover {
-	background-color: lightgreen;
+.navbar-button:hover, .active-nav {
+	color: white;
+	background-color: #666;
 }
 
 a {
 	color: white;
 }
 
-.right-bar {
-	border-right: 1px solid #f9f9f9;
+a:hover {
+	text-decoration: none;
 }
 
 #custom-search-input{
@@ -56,6 +61,7 @@ a {
 
 #search-bar-title {
 	margin-top: 30px;
+	color: #666;
 }
 
 #custom-search-input button{
@@ -76,13 +82,14 @@ a {
 
 #custom-search-input .glyphicon-search{
     font-size: 23px;
+    color: #666;
 }
 
 .picture-title h4 {
 	margin: 0px;
 	text-align: center;
-	border-bottom: 1px solid #666;
-	color: #666;
+	border-bottom: 1px solid #9cb535;
+	color: white;
 }
 
 .front {
@@ -97,7 +104,7 @@ a {
 
 }
 .back {
-	padding: 20px;
+	padding: 10px 0px;
 	width: 200px;
 	height: 200px;
 	bottom: 200px;
@@ -107,8 +114,12 @@ a {
 	-webkit-transition: 1s;
 }
 
+.back ul {
+	text-align: left;
+}
+
 .front, .back {
-	background-color: #ccc;
+	background-color: #9cb535;
 	border-radius: 10px;
 }
 
