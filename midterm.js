@@ -9,7 +9,7 @@
 
 strainObj = { 
 	strains: [
-	{name:'Cotton Candy Kush', 
+	{ name:'Cotton Candy Kush', 
 	 type:'indica', 
 	 THC:'13.83%', 
 	 CBD:'0.5%', 
@@ -115,23 +115,33 @@ $(document).on('ready',function(){
 	$('#search-button').on('click', function(){
 		var searchResults = {strains:[]}
 		var inputValue = $('#input-box').val()
+		var matched = false;
 		$('#input-box').val('')
 		// console.log(inputValue)
 		for(var i = 0; i < strainObj.strains.length; i++){
 			strainObj.strains[i].ailments.forEach(function(ailment){
 				
 				if(inputValue === ailment){
-				// console.log('this is true')
-				// console.log(strainObj.strains[i])
-				searchResults.strains.push(strainObj.strains[i])
-				// console.log(searchResults)
-				}		 
-				else {
-					// alert('Sorry, there are no results for your search');
+					matched = true;
 
-				}
+				searchResults.strains.push(strainObj.strains[i])
+				}		 
 			})
 		}
+		
+		for(var i = 0; i < strainObj.strains.length; i++){
+			var casing = new RegExp(strainObj.strains[i].name.toLowerCase(), 'i')
+
+			if(inputValue.toLowerCase().match(casing) !== null){
+				matched = true;
+			
+			searchResults.strains.push(strainObj.strains[i])
+			}
+		}
+			if ( matched === false){
+				alert('Sorry, there are no results for you search')
+		}
+
 
 		cardTemplate = $('#card-content-area').html(theTemplate(searchResults));
 
@@ -144,7 +154,35 @@ $(document).on('ready',function(){
 	  }
 	});
 
+	// $('#search-button').on('click', function(){
+	// 	var searchResults = {strains:[]}
+	// 	var inputValue = $('#input-box').val()
+	// 	$('#input-box').val('')
+	// 	// console.log(inputValue)
+	// 	for(var i = 0; i < strainObj.strains.length; i++){
+	// 			console.log('hi')
+	// 			if(inputValue == strainObj.strains[i].name){
+					
+	// 			// console.log(strainObj.strains[i])
+	// 			// searchResults.strains.push(strainObj.strains[i])
+	// 			// console.log(searchResults)
+	// 			}		 
+	// 			else {
+	// 				// alert('Sorry, there are no results for your search');
 
+	// 			}
+	// 	}
+
+	// 	cardTemplate = $('#card-content-area').html(theTemplate(searchResults));
+
+	// })
+
+	// $('#input-box').keypress(function (e) {
+	//   if (e.which === 13) {
+	//     $('#search-button').click();
+	//     return false;   
+	//   }
+	// });
 
 
 

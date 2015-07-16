@@ -8,10 +8,13 @@
 }
 
 .page-name {
-	font-size: 28px;
-	padding-left: 110px;
-	position: absolute;
+    font-size: 34px;
+    padding-left: 20px;
+    padding-top: 85px;
+    font-family: Baskerville;
+    position: absolute;
     color: white;
+    display: inline-block;
 }
 
 a {
