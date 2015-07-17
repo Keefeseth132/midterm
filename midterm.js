@@ -97,7 +97,25 @@ strainObj = {
 	 CBN:'0.01%-0.03%', 
 	 effects:'relaxed, happy', 
 	 ailments: ['stress', 'pain', 'depression'],
-	 image:'images/skywalker-og.jpg'}
+	 image:'images/skywalker-og.jpg'},
+
+	 {name:'Strawberry Cough', 
+	 type:'sativa', 
+	 THC:'12%-18%', 
+	 CBD:'0.17%', 
+	 CBN:'0.05%', 
+	 effects:'happy, uplifted, euphoric', 
+	 ailments: ['fatigue', 'depression', 'anxiety'],
+	 image:'images/strawberry-cough.jpg'},
+
+	 {name:'White Rhino', 
+	 type:'indica', 
+	 THC:'14%-19%', 
+	 CBD:'0.19%-0.88%', 
+	 CBN:'0.05%-0.74%', 
+	 effects:'happy, relaxed, euphoric', 
+	 ailments: ['insomnia', 'depression', 'pain'],
+	 image:'images/white-rhino.jpg'}
 ]}
 
 $(document).on('ready',function(){
